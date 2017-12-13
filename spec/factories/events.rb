@@ -8,8 +8,8 @@ FactoryBot.define do
     location           { Faker::Address.city }
     price             { Faker::Commerce.price }
     capacity       2
-    #starts_at
-    #ends_at
+    starts_at           DateTime.now
+     ends_at             DateTime.now.next_day(1)
 
     includes_food       true
     includes_drinks      true

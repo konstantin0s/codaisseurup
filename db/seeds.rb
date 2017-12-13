@@ -16,6 +16,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+#user = ["Name"]
+
+#5.times.do
+#  name = Faker::Name.name
+
+  # Add user to user_list
+#  user << [ name ]
+#end
+
+#user.each do |name|
+#  User.create(name: name)
+#end
+
+
 Event.destroy_all
  User.destroy_all
 
