@@ -13,5 +13,5 @@ class Event < ApplicationRecord
   #validates_date :starts_at, on_or_before: lambda { ends_at }
   validates :description, presence: true, length: { maximum: 500 }
 
-  validate :start_must_be_before_end_time
+  #validate :start_must_be_before_end_time
 end
