@@ -16,7 +16,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Event.destroy_all
  User.destroy_all
 
 dino = User.create!(
@@ -32,21 +32,23 @@ lus = User.create!(
   email: 'lus@codaisseur.com',
   password: '123456'
 )
-#category_meeting = Category.create!(name: "Meeting")
+category_meeting = Category.create!(name: "Meeting")
+category_politics = Category.create!(name: "Politics")
+category_charity = Category.create!(name: "Charity")
 
-#Event.create!(
-#  name: "Meetings",
-#  description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
-#   location: "Roterdam",
-#   price: 100,
-#   capacity: 200,
-#  includes_food:true,
-#   includes_drinks:true,
-#   starts_at:DateTime.strptime("12/20/2017 7:30", "%m/%d/%Y %H:%M"),
-#   ends_at:DateTime.strptime("12/20/2017 9:30", "%m/%d/%Y %H:%M"),
-#   active:true,
-#  user: dino) #,
-#categories: [category_meeting])
+Event.create!(
+  name: "Meetings",
+  description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
+   location: "Roterdam",
+   price: 100,
+   capacity: 200,
+  includes_food:true,
+   includes_drinks:true,
+   starts_at:DateTime.strptime("12/20/2017 7:30", "%m/%d/%Y %H:%M"),
+   ends_at:DateTime.strptime("12/20/2017 9:30", "%m/%d/%Y %H:%M"),
+   active:true,
+  user: dino ,
+categories: [category_meeting])
 
   Event.create!(
     name: "Meetings",
