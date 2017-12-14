@@ -9,6 +9,7 @@ source 'https://rubygems.org'
 
 ruby '2.4.2'
 
+gem 'carrierwave', '0.11.2'
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
