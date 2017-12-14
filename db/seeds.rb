@@ -32,7 +32,7 @@
 #end
 
 
-Event.destroy_all
+Category.destroy_all
  User.destroy_all
 
 dino = User.create!(
