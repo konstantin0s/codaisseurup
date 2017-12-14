@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.4.2'
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
 
