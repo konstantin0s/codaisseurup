@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     end
 
     def create
-      @event = current_user.events.build(event_params)
+      @event = current_user.events.build(events_params)
 
       if @event.save
         redirect_to @event, notice: "Event created"
@@ -27,10 +27,11 @@ class EventsController < ApplicationController
       end
     end
 
-    def edit; end
+    def edit
+     end
 
     def update
-      if @event.update(event_params)
+      if @event.update(events_params)
         redirect_to @event, notice: "Event updated"
       else
         render :edit
@@ -44,7 +45,7 @@ class EventsController < ApplicationController
     end
 
 
-  def event_params
+  def events_params
     params
       .require(:event)
       .permit(:name, :description, :location,

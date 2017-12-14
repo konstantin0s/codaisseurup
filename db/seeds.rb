@@ -17,11 +17,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-Profile.destroy_all
-Event.destroy_all
-User.destroy_all
+Photo.destroy_all
 Category.destroy_all
+Event.destroy_all
+Profile.destroy_all
+User.destroy_all
 
 
 dino = User.create!(
@@ -37,11 +37,14 @@ lus = User.create!(
   email: 'lus@codaisseur.com',
   password: '123456'
 )
+
+
 category_meeting = Category.create!(name: "Meeting")
 category_politics = Category.create!(name: "Politics")
 category_charity = Category.create!(name: "Charity")
 
-Event.create!(
+
+event1 = Event.create!(
   name: "Meetings",
   description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
    location: "Roterdam",
@@ -55,7 +58,7 @@ Event.create!(
   user: dino ,
 categories: [category_meeting])
 
-  Event.create!(
+event2 =  Event.create!(
     name: "Meetings",
     description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
      location: "Roterdam",
@@ -66,10 +69,11 @@ categories: [category_meeting])
      starts_at:DateTime.strptime("12/20/2017 7:30", "%m/%d/%Y %H:%M"),
      ends_at:DateTime.strptime("12/20/2017 9:30", "%m/%d/%Y %H:%M"),
      active:true,
-    user: lus)
+    user: lus,
+  categories: [category_charity])
 
 
-  Event.create!(
+  event3 = Event.create!(
     name: "Meetings",
     description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
      location: "Roterdam",
@@ -80,12 +84,13 @@ categories: [category_meeting])
      starts_at:DateTime.strptime("12/20/2017 7:30", "%m/%d/%Y %H:%M"),
      ends_at:DateTime.strptime("12/20/2017 9:30", "%m/%d/%Y %H:%M"),
      active:true,
-    user: dino)
+    user: dino,
+  categories: [category_meeting])
 
 
 
 
- Event.create!(
+ event4 = Event.create!(
    name: "Meetings",
    description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
     location: "Roterdam",
@@ -96,4 +101,10 @@ categories: [category_meeting])
     starts_at:DateTime.strptime("12/20/2017 7:30", "%m/%d/%Y %H:%M"),
     ends_at:DateTime.strptime("12/20/2017 9:30", "%m/%d/%Y %H:%M"),
     active:true,
-   user: mama)
+   user: mama,
+ categories: [category_politics])
+
+
+photo1 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264068/event4_itqfyf.jpg", event: event4)
+photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event3_uofdhj.jpg", event: event3)
+photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event2_z1wvzb.jpg", event: event2)
