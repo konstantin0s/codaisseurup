@@ -43,7 +43,7 @@ def edit
 end
 
 def update
-  if @event.update(event_params)
+  if @event.update(events_params)
     image_params.each do |image|
       @event.photos.create(image: image)
     end

@@ -6,6 +6,10 @@ class Event < ApplicationRecord
 
    has_many :photos
 
+   has_many :bookings, dependent: :destroy
+
+   has_many :guests, through: :bookings, source: :user
+
   validates :name, presence: true, length: { maximum: 50 }
 validates :price, presence: true
 validates :capacity, presence: true

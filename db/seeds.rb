@@ -1,11 +1,13 @@
 
-
 Photo.destroy_all
-Category.destroy_all
-Event.destroy_all
-Profile.destroy_all
+Booking.destroy_all
 User.destroy_all
+Profile.destroy_all
+Event.destroy_all
+Category.destroy_all
 
+
+#users
 
 dino = User.create!(
   email: 'dino@codaisseur.com',
@@ -21,12 +23,12 @@ lus = User.create!(
   password: '123456'
 )
 
-
+#categories
 category_meeting = Category.create!(name: "Meeting")
 category_politics = Category.create!(name: "Politics")
 category_charity = Category.create!(name: "Charity")
 
-
+#events
 event1 = Event.create!(
   name: "Meetings",
   description: "Normcore meh put a bird on it man braid mumblecore, locavore synth swag kogi helvetica ugh health goth twee ",
@@ -88,6 +90,13 @@ event2 =  Event.create!(
  categories: [category_politics])
 
 
+#photos
 photo1 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264068/event4_itqfyf.jpg", event: event4)
 photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event3_uofdhj.jpg", event: event3)
 photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event2_z1wvzb.jpg", event: event2)
+
+
+#bookings
+
+Booking.create!(event: event1, user: dino, total: 100, starts_at: 10.days.from_now, ends_at: 12.days.from_now)
+Booking.create!(event: event2, user: mama, total: 200, starts_at: 20.days.from_now, ends_at: 24.days.from_now)
