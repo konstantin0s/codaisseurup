@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         has_many :events, dependent: :destroy
          has_one :profile
+         has_many :events, dependent: :destroy
 
  def full_name
    return profile.full_name if profile?
