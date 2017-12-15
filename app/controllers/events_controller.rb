@@ -59,12 +59,12 @@ end
     def set_event
       @event = Event.find(params[:id])
     end
-
-    private
-
     def image_params
       params[:images].present? ? params.require(:images) : []
     end
+
+    private
+
 
 
   def events_params
