@@ -43,7 +43,7 @@ def edit
 end
 
 def update
-  if @event.update(events_params)
+  if @event.update(event_params)
     image_params.each do |image|
       @event.photos.create(image: image)
     end
@@ -56,14 +56,14 @@ end
 
     private
 
-    def image_params
-      params[:images].present? ? params.require(:images) : []
+    def set_event
+      @event = Event.find(params[:id])
     end
 
     private
 
-    def set_event
-      @event = Event.find(params[:id])
+    def image_params
+      params[:images].present? ? params.require(:images) : []
     end
 
 
