@@ -105,6 +105,6 @@ event2 =  Event.create!(
  categories: [category_politics])
 
 
-photo1 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264068/event4_itqfyf.jpg", event: event4)
-photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event3_uofdhj.jpg", event: event3)
-photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event2_z1wvzb.jpg", event: event2)
+photo1 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264068/event4_itqfyf.jpg", event: event1)
+photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event3_uofdhj.jpg", event: event2)
+photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event2_z1wvzb.jpg", event: event3)

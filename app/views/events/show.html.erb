@@ -32,10 +32,12 @@
     <br>
 
     <!-- Photos -->
-<h4>Photos</h4>
-<% @event.photos.each do |photo| %>
-  <%= image_tag photo.image %>
-<% end %>
+    <h4>Photos</h4>
+    <% @event.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+    <% end %>
+
+
     <!--<p>Categories: <%#= @event.active %></p>-->
 
     <h4>Categories</h4>
