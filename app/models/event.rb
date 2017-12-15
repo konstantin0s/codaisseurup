@@ -4,11 +4,11 @@ class Event < ApplicationRecord
   has_and_belongs_to_many :categories
   # has_many :events, dependent: :destroy
 
-   has_many :photos
+   has_many :photos, dependent: :destroy
 
-   has_many :bookings, dependent: :destroy
+   has_many :registrations, dependent: :destroy
 
-   has_many :guests, through: :bookings, source: :user
+   has_many :guests, through: :registrations, source: :user
 
   validates :name, presence: true, length: { maximum: 50 }
 validates :price, presence: true

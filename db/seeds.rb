@@ -1,8 +1,8 @@
 
-Photo.destroy_all
-Booking.destroy_all
-User.destroy_all
 Profile.destroy_all
+User.destroy_all
+Photo.destroy_all
+Registration.destroy_all
 Event.destroy_all
 Category.destroy_all
 
@@ -96,7 +96,7 @@ photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0
 photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/konstantin0s/image/upload/t_media_lib_thumb/v1513264069/event2_z1wvzb.jpg", event: event2)
 
 
-#bookings
+#registrations
 
-Booking.create!(event: event1, user: dino, total: 100, starts_at: 10.days.from_now, ends_at: 12.days.from_now)
-Booking.create!(event: event2, user: mama, total: 200, starts_at: 20.days.from_now, ends_at: 24.days.from_now)
+Registration.create!(event: event1, user: dino, total: 100, starts_at: 10.days.from_now, ends_at: 12.days.from_now)
+Registration.create!(event: event2, user: mama, total: 200, starts_at: 20.days.from_now, ends_at: 24.days.from_now)
